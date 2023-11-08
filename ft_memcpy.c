@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: maverqui <maverqui@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/08 11:44:30 by maverqui          #+#    #+#             */
+/*   Updated: 2023/11/08 11:44:30 by maverqui         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void *ft_memcpy(void *dest, const void *src, size_t n)
@@ -9,14 +21,13 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
     const char *src_char = (const char *)src;
     while (src_char[i] != '\0' && i < n)
     {
-        dest_char[i] == src_char[i];
+        dest_char[i] = src_char[i];
         i++; 
     }
     return (dest);
 }
 //je dois seg fault avec n < 0
-#include <stdio.h>
-#include <bsd/string.h>
+
 int main()
 {
     char dest[0];
