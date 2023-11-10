@@ -28,8 +28,6 @@ size_t  ft_strlcpy(char *dst, const char *src, size_t size)
     return (ft_strlen(src));
 }
 
-#include <stdio.h>
-#include <bsd/string.h>
 int main()
 {
     char dest[0];
