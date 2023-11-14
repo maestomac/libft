@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maverqui <maverqui@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 12:49:38 by maverqui          #+#    #+#             */
-/*   Updated: 2023/11/13 14:05:20 by maverqui         ###   ########.fr       */
+/*   Updated: 2023/11/14 02:06:47 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,13 @@ char *ft_strtrim(char const *s1, char const *set)
 	size_t i;
 	size_t j;
 	char *clean;
+	char *end;
 
 	i = 0;
 	j = 0;
-	clean = (char *)malloc (sizeof(ft_strlen(s1)));//trouvertaille 
+	while (end[i])
+		end++;
+	clean = (char *)malloc (sizeof(char) * ft_strlen(end - s1));//trouvertaille 
 	if (!clean || !s1 || !set)
 		return NULL;
 	while (s1[i])
