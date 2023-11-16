@@ -24,6 +24,7 @@ all: $(NAME)
 $(NAME): $(OBJETS)
 	$(CC) $(FLAGS) -o $(NAME) $(OBJECTS)
 
-clean: rm -f $(OBJECTS) $(NAME)
+clean:
+	rm -f $(OBJECTS) $(NAME)
 
-.PHONY: all clean 
+.PHONY: all clean fclean re

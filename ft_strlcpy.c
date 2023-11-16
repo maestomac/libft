@@ -28,9 +28,9 @@ size_t  ft_strlcpy(char *dst, const char *src, size_t size)
     return (ft_strlen(src));
 }
 
-int main()
-{
-    char dest[0];
-    printf("%d\n", ft_strlcpy(dest, "abc", 0));
-    printf("%d\n", strlcpy(dest, "abc", 0));
-}
+// int main()
+// {
+//     char dest[0];
+//     printf("%d\n", ft_strlcpy(dest, "abc", 0));
+//     printf("%d\n", strlcpy(dest, "abc", 0));
+// }

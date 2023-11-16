@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: maverqui <maverqui@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/15 17:50:53 by maverqui          #+#    #+#             */
+/*   Updated: 2023/11/15 17:50:53 by maverqui         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char *ft_substr(const char *s, unsigned int start, size_t len)
@@ -20,8 +32,7 @@ char *ft_substr(const char *s, unsigned int start, size_t len)
     return (new_s);
 }
 
-int main()
-{
-    printf("%s\n", ft_substr("nugah kagollllle", 20, 10));
-    // printf("%s\n", substr("nugah kagollllle", 2, 4));
-}
+// int main()
+// {
+//     printf("%s\n", ft_substr("nugah kagollllle", 5, 10));
+// }

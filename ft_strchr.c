@@ -26,8 +26,8 @@ char *ft_strchr(const char *s, int c)
     return (NULL);
 }
 
-int main()
-{
-    printf("%s\n", ft_strchr("hjdguiabc", 9));
-    printf("%s\n", strchr("hjdguiabc", 9));
-}
+// int main()
+// {
+//     printf("%s\n", ft_strchr("hjdguiabc", 9));
+//     printf("%s\n", strchr("hjdguiabc", 9));
+// }
