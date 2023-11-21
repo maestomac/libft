@@ -28,10 +28,3 @@ void *ft_memset(void *s, int c, size_t n)
     }
     return (str);
 }
-
-// int main()
-// {
-//     char s[100];
-//     printf("%s\n", ft_memset(s, 'a', 8));
-//     printf("%s\n", memset(s, 'a', 8));
-// }

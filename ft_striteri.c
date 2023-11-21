@@ -15,7 +15,6 @@
 void ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
     unsigned int i;
-    char *result;
 
     i = 0;
     if (!s || !f)
@@ -25,22 +24,4 @@ void ft_striteri(char *s, void (*f)(unsigned int, char*))
         (*f)(i, s);
         i++;
     }
-}
-
-void fuk_a(unsigned int i, char *s)
-{
-	if (s[i] != 'a')
-    	printf("%c", s[i]);
-}
-
-void print_letters(unsigned int i, char *s)
-{
-    printf("%c", s[i]);
-}
-
-int main()
-{
-	ft_striteri("1 : abc\n\n", (*print_letters));
-	ft_striteri("2 : abcaaaaaaaaaaa\n", (*fuk_a));
-	return (0);
 }

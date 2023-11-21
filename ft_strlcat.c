@@ -34,10 +34,3 @@ size_t ft_strlcat(char *dst, const char *src, size_t size)
 	dst[j + i] = '\0';
     return (ft_strlen(dst));
 }
-
-int main()
-{
-	char dest[10] = "oui";
-	printf("%zu\n", ft_strlcat(dest,"non", 6));
-	printf("%s\n", dest);
-}

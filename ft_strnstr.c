@@ -6,7 +6,7 @@
 /*   By: maverqui <maverqui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 10:52:45 by maverqui          #+#    #+#             */
-/*   Updated: 2023/11/08 18:05:00 by maverqui         ###   ########.fr       */
+/*   Updated: 2023/11/21 14:54:34 by maverqui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,4 @@ char *ft_strnstr(const char *big, const char *little, size_t len)
 		i++;
 	}
 	return ((char *)big);
-}
-#include <bsd/string.h>
-int main()
-{
-	printf("%s\n", ft_strnstr("je", "", 10));
-	printf("%s\n", strnstr("je", "", 10));
 }

@@ -31,8 +31,3 @@ char *ft_substr(const char *s, unsigned int start, size_t len)
     new_s[i] = '\0';
     return (new_s);
 }
-
-// int main()
-// {
-//     printf("%s\n", ft_substr("nugah kagollllle", 5, 10));
-// }

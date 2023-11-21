@@ -17,17 +17,15 @@ char *ft_strchr(const char *s, int c)
     int i;
 
     i = 0;
-    while (s[i] != '\0')
+	if (!s)
+		return (NULL);
+    while (s[i])
     {
-        if (c == s[i])
+        if(((unsigned char *)s)[i] == (unsigned char)c)
             return ((char *)&s[i]);
         i++;
     }
+	if(((unsigned char *)s)[i] == (unsigned char)c)
+        return ((char *)&s[i]);
     return (NULL);
 }
-
-// int main()
-// {
-//     printf("%s\n", ft_strchr("hjdguiabc", 9));
-//     printf("%s\n", strchr("hjdguiabc", 9));
-// }

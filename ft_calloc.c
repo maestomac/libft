@@ -6,7 +6,7 @@
 /*   By: maverqui <maverqui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 13:54:24 by maverqui          #+#    #+#             */
-/*   Updated: 2023/11/10 15:09:27 by maverqui         ###   ########.fr       */
+/*   Updated: 2023/11/21 15:04:27 by maverqui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ void *ft_calloc(size_t nmemb, size_t size)
 	size_t len;
 	void *ptr;
 
+	len = 0;
 	i = 0;
 	ptr = (void *) malloc(nmemb * sizeof(size));
 	if(!ptr)
@@ -28,13 +29,4 @@ void *ft_calloc(size_t nmemb, size_t size)
 		i++;
 	}
 	return (ptr);
-}
-int main()
-{
-	char *test1;
-	char *test2;
-	test1 = malloc(5000000 *sizeof(char *));
-	test2 = calloc(5000000, sizeof(char *));
-	printf("{%s}\n", test1);
-	printf("[%s]\n", test2);
 }

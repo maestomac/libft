@@ -71,24 +71,3 @@ char **ft_split(char const *s, char c)
 	tab[i] = NULL;
 	return (tab);
 }
-
-// int main(int ac, char **av)
-// {
-// 	if (ac != 2)
-// 		return (1);
-// 	char **test = ft_split(av[1], ' ');
-// 	int i = 0;
-// 	while (test[i])
-// 	{
-// 		printf("tab[%d] = %s\n", i, test[i]);
-// 		i++;
-// 	}
-// 	i = 0;
-// 	while (test[i])
-// 	{
-// 		free(test[i]);
-// 		i++;
-// 	}
-// 	free(test);
-// 	return (0);
-// }

@@ -23,8 +23,3 @@ void ft_putstr_fd(char *s, int fd)
         i++;
     }
 }
-
-int main()
-{
-    ft_putstr_fd("abc", 1);
-}

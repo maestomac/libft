@@ -14,22 +14,27 @@
 
 char *ft_strrchr(const char *s, int c)
 {
-    int i;
-    int taille;
+    size_t	i;
 
-    taille = ft_strlen(s);
-    i = taille - 1;
-    while (i >= 0)
+    i = ft_strlen(s);
+	if (!s)
+		return NULL;
+    while (i > 0)
     {
-        if (s[i] == c)
+        if (s[i] == c % 256) //pr pas overflow
             return ((char *)&s[i]);
         i--;
     }
+	if (s[i] == c % 256)
+            return ((char *)s);
     return (NULL);
 }
 
-int main()
-{
-    printf("%s\n", ft_strrchr("hjabdguiabc", ' '));
-    printf("%s\n", strrchr("hjabdguiabc", ' '));
-}
+// int main()
+// {
+// 	char s[] = "tripouille";
+// 	if (ft_strrchr(s, 0) == s + strlen(s))
+// 		printf("%s\n", ft_strrchr(s, 0));
+// 	else
+// 		printf("ici\n");
+// }

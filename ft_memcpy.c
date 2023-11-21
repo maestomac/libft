@@ -24,10 +24,3 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
     }
     return (dest);
 }
-
-int main()
-{
-    char dest[0];
-    printf("%d\n", ft_memcpy(dest, "abc", 1));
-    printf("%d\n", memcpy(dest, "abc", 1));
-}

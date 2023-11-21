@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: maverqui <maverqui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 12:49:38 by maverqui          #+#    #+#             */
-/*   Updated: 2023/11/15 19:32:03 by marvin           ###   ########.fr       */
+/*   Updated: 2023/11/21 14:54:45 by maverqui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,9 +52,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 		end--; // tant qu'on ne rencontre pas un char de set
 	result = ft_substr(s1, start, end - start);// on ecrit la diff entre end et start
 	return (result);
-}
-
-int main()
-{
-	printf(("%s\n"), ft_strtrim("abbcouibca", "abc"));
 }

@@ -6,7 +6,7 @@
 /*   By: maverqui <maverqui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 12:20:38 by maverqui          #+#    #+#             */
-/*   Updated: 2023/11/13 12:48:39 by maverqui         ###   ########.fr       */
+/*   Updated: 2023/11/21 14:54:00 by maverqui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,4 @@ char *ft_strjoin(char const *s1, char const *s2)
 	}
 	full[i + j] = '\0';
 	return (full);
-}
-
-int main()
-{
-	printf(("%s\n", ft_strjoin("non ", " oui")));
-	// printf(("%s\n", strjoin("abcd", "efgh")));
 }

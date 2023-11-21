@@ -6,7 +6,7 @@
 /*   By: maverqui <maverqui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:02:44 by maverqui          #+#    #+#             */
-/*   Updated: 2023/11/15 18:32:29 by maverqui         ###   ########.fr       */
+/*   Updated: 2023/11/21 14:53:16 by maverqui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,3 @@ char	*ft_strdup(const char *s)
 	s2[i] = '\0';
 	return (s2);
 }
-
-// int main()
-// {
-//     printf("%s\n", ft_strdup("abc"));
-//     printf("%s\n", strdup("abc"));
-// }
