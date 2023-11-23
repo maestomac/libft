@@ -11,26 +11,18 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+# include <bsd/string.h>
+
 
 size_t ft_strlcat(char *dst, const char *src, size_t size)
 {
-    size_t i;
-	size_t j;
-    size_t taille;
+    size_t dst_size;
 
-    taille = ft_strlen(src) + ft_strlen(dst);
-    i = 0;
-	j = ft_strlen(dst);
-	if (!src || !dst)
-		return (0);
-    if (taille > size || size == 0)
-        return (ft_strlen(src));
-    while (src[i] != '\0' && i < size)
-    {
-        dst[j + i] = src[i];
-		printf("taille = %lu|%lu\n", ft_strlen(dst) + i, i);
-		i++;
-    }
-	dst[j + i] = '\0';
-    return (ft_strlen(dst));
+    dst_size = ft_strlen(dst);
+	if (dst_size < size)
+	{
+		ft_strlcpy(dst + dst_size, src, size - dst_size);
+		return (dst_size + ft_strlen(src));
+	}
+    return (size + ft_strlen(src));
 }

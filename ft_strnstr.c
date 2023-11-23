@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maverqui <maverqui@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 10:52:45 by maverqui          #+#    #+#             */
-/*   Updated: 2023/11/21 14:54:34 by maverqui         ###   ########.fr       */
+/*   Updated: 2023/11/23 20:58:39 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,24 @@
 char *ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t i;
-	size_t j;
+    size_t j;
 
-	i = 0;
-	if(little == NULL)
-		return ((char *)big);
-	if(big[0] == '\0')
-		return NULL;
-	while(big[i] != '\0' && i < len)
-	{
-		j = 0;
-		while(big[i + j] == little[j])
-		{
-			if (little[j + 1] == '\0' )
-				return ((char *)big + i);
-			j++;
-		}
-		i++;
-	}
-	return ((char *)big);
+    i = 0;
+    if (little[0] == '\0' || !big)
+        return ((char *)big);
+    while (big[i] && i < len)
+    {
+        if (big[i] == little[0])
+        {
+            j = 0;
+            while (big[i + j] == little[j] && (i + j) < len)
+            {
+                if (little[j + 1] == '\0')
+                       return ((char *)&big[i]);
+                j++;
+            }
+        }
+        i++;
+    }
+    return (NULL);
 }
