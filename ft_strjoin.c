@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maverqui <maverqui@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 12:20:38 by maverqui          #+#    #+#             */
-/*   Updated: 2023/11/21 14:54:00 by maverqui         ###   ########.fr       */
+/*   Updated: 2023/11/24 13:44:32 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char *ft_strjoin(char const *s1, char const *s2)
 
 	j = 0;
 	i = 0;
-	full = (char *)malloc (sizeof(char) * (ft_strlen(s1) + ft_strlen(s2)));
+	full = malloc (sizeof(char) * (ft_strlen(s1) + ft_strlen(s2)) + 1);
 	if (!full)
 		return NULL;
 	while (s1[i])
