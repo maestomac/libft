@@ -6,7 +6,7 @@
 /*   By: maverqui <maverqui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 12:49:38 by maverqui          #+#    #+#             */
-/*   Updated: 2023/11/21 14:54:45 by maverqui         ###   ########.fr       */
+/*   Updated: 2023/11/29 16:01:01 by maverqui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	end;
 	char	*result;
 
-	start = 0;
-	end = ft_strlen(s1); // initialise end a la fin
 	if (!s1)
 		return (NULL);
 	if (!set)
-		return (ft_strdup(s1)); //renvoi tt avec malloc
+		return (ft_strdup(s1));
+	start = 0;
+	end = ft_strlen(s1);
 	while (char_in_set(s1[start], set) == 0)
 		start++; // tant qu'on ne rencontre pas un char de set
 	if (start == ft_strlen(s1)) // que des char de set

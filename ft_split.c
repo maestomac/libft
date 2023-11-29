@@ -65,7 +65,7 @@ char **ft_split(char const *s, char c)
 	{
 		next_word = count_word_len(s, c, next_word, &word_len);
 		tab[i] = malloc(sizeof(char) * (word_len + 1));
-		ft_strlcpy(tab[i], &s[next_word - word_len], word_len);
+		ft_strlcpy(tab[i], &s[next_word - word_len], word_len + 1);
 		i++;
 	}
 	tab[i] = NULL;

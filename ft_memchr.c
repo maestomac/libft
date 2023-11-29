@@ -6,7 +6,7 @@
 /*   By: maverqui <maverqui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 17:36:42 by maverqui          #+#    #+#             */
-/*   Updated: 2023/11/21 16:38:00 by maverqui         ###   ########.fr       */
+/*   Updated: 2023/11/29 15:52:46 by maverqui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ void *ft_memchr(const void *s, int c, size_t n)
 	size_t i;
 
 	i = 0;
-	if (!s)
-		return (NULL);
 	while (i < n)
 	{
 		if(((unsigned char *)s)[i] == (unsigned char)c)
