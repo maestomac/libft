@@ -11,20 +11,19 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-# include <bsd/string.h>
+#include <bsd/string.h>
 
-
-size_t ft_strlcat(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-    size_t dst_size;
-	
+	size_t	dst_size;
+
 	if (size == 0)
 		return (ft_strlen(src));
-    dst_size = ft_strlen(dst);
+	dst_size = ft_strlen(dst);
 	if (dst_size < size)
 	{
 		ft_strlcpy(dst + dst_size, src, size - dst_size);
 		return (dst_size + ft_strlen(src));
 	}
-    return (size + ft_strlen(src));
+	return (size + ft_strlen(src));
 }

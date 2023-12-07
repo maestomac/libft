@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-static	size_t count_words(const char *str, char sep)
+static	size_t	count_words(const char *str, char sep)
 {
 	size_t	i;
-	size_t result;
+	size_t	result;
 
 	i = 0;
 	result = 0;
@@ -33,7 +33,8 @@ static	size_t count_words(const char *str, char sep)
 	return (result);
 }
 
-static size_t count_word_len(const char* str, char sep, size_t n_w, size_t *word_len)
+static	size_t	count_word_len(const char *str, char sep, size_t n_w
+, size_t *word_len)
 {
 	size_t	i;
 	size_t	j;
@@ -48,7 +49,7 @@ static size_t count_word_len(const char* str, char sep, size_t n_w, size_t *word
 	return (i);
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	size_t	i;
 	size_t	word_len;
@@ -60,13 +61,18 @@ char **ft_split(char const *s, char c)
 	word_len = 0;
 	tab = malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (!tab)
-		return NULL;
+		return (NULL);
 	while (i < count_words(s, c))
 	{
 		next_word = count_word_len(s, c, next_word, &word_len);
 		tab[i] = malloc(sizeof(char) * (word_len + 1));
-		ft_strlcpy(tab[i], &s[next_word - word_len], word_len + 1);
-		i++;
+		if (!tab[i])
+		{
+			while (*tab)
+				free(*tab++);
+			return (free(tab), NULL);
+		}
+		ft_strlcpy(tab[i++], &s[next_word - word_len], word_len + 1);
 	}
 	tab[i] = NULL;
 	return (tab);

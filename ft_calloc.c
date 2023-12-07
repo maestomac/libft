@@ -6,23 +6,23 @@
 /*   By: maverqui <maverqui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 13:54:24 by maverqui          #+#    #+#             */
-/*   Updated: 2023/11/29 13:17:49 by maverqui         ###   ########.fr       */
+/*   Updated: 2023/12/07 19:31:49 by maverqui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	void *ptr;
+	void	*ptr;
 
 	if (nmemb == 0 || size == 0)
 		return (malloc(0));
-	if(nmemb > SIZE_MAX / size)
-		return NULL;
+	if (nmemb > SIZE_MAX / size)
+		return (NULL);
 	ptr = malloc(nmemb * size);
-	if(!ptr)
-		return NULL;
+	if (!ptr)
+		return (NULL);
 	ft_bzero(ptr, nmemb * size);
 	return (ptr);
 }

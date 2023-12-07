@@ -6,13 +6,13 @@
 /*   By: maverqui <maverqui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 16:32:47 by maverqui          #+#    #+#             */
-/*   Updated: 2023/11/21 15:04:12 by maverqui         ###   ########.fr       */
+/*   Updated: 2023/12/07 19:30:51 by maverqui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);
 }

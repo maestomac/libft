@@ -6,7 +6,7 @@
 /*   By: maverqui <maverqui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 12:49:38 by maverqui          #+#    #+#             */
-/*   Updated: 2023/11/29 16:01:01 by maverqui         ###   ########.fr       */
+/*   Updated: 2023/12/07 20:30:34 by maverqui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	char_in_set(char c, const char *set)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (set[i])
@@ -39,17 +39,17 @@ char	*ft_strtrim(char const *s1, char const *set)
 	start = 0;
 	end = ft_strlen(s1);
 	while (char_in_set(s1[start], set) == 0)
-		start++; // tant qu'on ne rencontre pas un char de set
-	if (start == ft_strlen(s1)) // que des char de set
+		start++;
+	if (start == ft_strlen(s1))
 	{
-		result = ft_strdup(""); // malloc de vide
+		result = ft_strdup("");
 		if (!result)
 			return (NULL);
 		else
 			return (result);
 	}
 	while (char_in_set(s1[end - 1], set) == 0)
-		end--; // tant qu'on ne rencontre pas un char de set
-	result = ft_substr(s1, start, end - start);// on ecrit la diff entre end et start
+		end--;
+	result = ft_substr(s1, start, end - start);
 	return (result);
 }
